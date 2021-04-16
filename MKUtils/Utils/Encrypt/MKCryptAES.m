@@ -24,10 +24,10 @@ NSString const *kLCInitVector = @"A-16-Byte-String";
 
 /* 本地数据加密串 16、24、32 */
 #define kAESLocalKey ({ \
-    unsigned char local_key[] = {(AES_KEY ^ 'l'), (AES_KEY ^ 'e'), (AES_KEY ^ 'x'), (AES_KEY ^ 'i'), (AES_KEY ^ 'n'), \
-        (AES_KEY ^ 'l'), (AES_KEY ^ 'e'), (AES_KEY ^ 'k'), (AES_KEY ^ 'a'), \
-        (AES_KEY ^ 'b'), (AES_KEY ^ 'y'), (AES_KEY ^ 't'), (AES_KEY ^ 'e'), \
-        (AES_KEY ^ '2'), (AES_KEY ^ '2'), (AES_KEY ^ '1'), (AES_KEY ^ '\0')}; \
+    unsigned char local_key[] = {(AES_KEY ^ 'a'), (AES_KEY ^ 'b'), (AES_KEY ^ 'c'), (AES_KEY ^ 'd'), (AES_KEY ^ 'e'), \
+        (AES_KEY ^ 'a'), (AES_KEY ^ 'b'), (AES_KEY ^ 'c'), (AES_KEY ^ 'd'), \
+        (AES_KEY ^ 'b'), (AES_KEY ^ 'a'), (AES_KEY ^ 't'), (AES_KEY ^ 'e'), \
+        (AES_KEY ^ '2'), (AES_KEY ^ '0'), (AES_KEY ^ '1'), (AES_KEY ^ '\0')}; \
     aesString(local_key, AES_KEY); \
     unsigned char result[17]; \
     memcpy(result, local_key, 17); \
