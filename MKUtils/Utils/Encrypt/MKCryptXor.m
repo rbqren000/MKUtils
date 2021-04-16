@@ -20,8 +20,8 @@
 
 /* 本地数据加密串 */
 #define kXorLocalKey ({ \
-    unsigned char local_key[] = {(XOR_KEY ^ 'L'), (XOR_KEY ^ 'e'), (XOR_KEY ^ 'K'), \
-        (XOR_KEY ^ 'a'), (XOR_KEY ^ 'A'), (XOR_KEY ^ 'p'), (XOR_KEY ^ 'p'), (XOR_KEY ^ '\0')}; \
+    unsigned char local_key[] = {(XOR_KEY ^ 'a'), (XOR_KEY ^ 'b'), (XOR_KEY ^ 'C'), \
+        (XOR_KEY ^ 'a'), (XOR_KEY ^ 'B'), (XOR_KEY ^ 'p'), (XOR_KEY ^ 'c'), (XOR_KEY ^ '\0')}; \
     xorString(local_key, XOR_KEY);\
     unsigned char result[8]; \
     memcpy(result, local_key, 8); \

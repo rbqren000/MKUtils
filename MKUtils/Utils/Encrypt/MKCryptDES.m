@@ -24,8 +24,8 @@ static Byte kCryptDESIV[] = {1,2,3,4,5,6,7,8};
 
 /* 本地数据加密串 8 */
 #define kDESLocalKey ({ \
-    unsigned char local_key[] = {(DES_KEY ^ 'l'), (DES_KEY ^ 'e'), (DES_KEY ^ 'x'), (DES_KEY ^ 'i'), (DES_KEY ^ 'n'), \
-        (DES_KEY ^ 'l'), (DES_KEY ^ 'e'), (DES_KEY ^ 'k'), (DES_KEY ^ '\0')}; \
+    unsigned char local_key[] = {(DES_KEY ^ 'a'), (DES_KEY ^ 'b'), (DES_KEY ^ 'c'), (DES_KEY ^ 'd'), (DES_KEY ^ 'e'), \
+        (DES_KEY ^ 'f'), (DES_KEY ^ 'g'), (DES_KEY ^ 'h'), (DES_KEY ^ '\0')}; \
     desString(local_key, DES_KEY); \
     unsigned char result[9]; \
     memcpy(result, local_key, 9); \
