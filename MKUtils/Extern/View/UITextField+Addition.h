@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^LCTextChangedBlock)(NSString *text);
+typedef void (^TextChangedBlock)(NSString *text);
 
 @interface UITextField (Addition)
 
 /// 文本变化的回调
-@property (nonatomic, copy) LCTextChangedBlock textChangedBlock;
+@property (nonatomic, copy) TextChangedBlock textChangedBlock;
 
 /// 限制文本长度
 @property (nonatomic, assign) NSInteger maxLength;
