@@ -15,12 +15,12 @@ static const void *blockTextChangedKey = &blockTextChangedKey;
 
 @implementation UITextField (Addition)
 
-- (LCTextChangedBlock)textChangedBlock {
-    LCTextChangedBlock textChangedBlock  = objc_getAssociatedObject(self, blockTextChangedKey);
+- (TextChangedBlock)textChangedBlock {
+    TextChangedBlock textChangedBlock  = objc_getAssociatedObject(self, blockTextChangedKey);
     return textChangedBlock;
 }
 
-- (void)setTextChangedBlock:(LCTextChangedBlock)textChangedBlock {
+- (void)setTextChangedBlock:(TextChangedBlock)textChangedBlock {
     objc_setAssociatedObject(self, blockTextChangedKey, textChangedBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
